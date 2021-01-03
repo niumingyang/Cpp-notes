@@ -105,15 +105,15 @@ class C: public A, protected B{
 #### 重复继承——虚基类
 - 如果直接基类有公共的基类就会出现重复继承
 ```mermaid
-graph TB
+graph BT
     A((A)) 
     B((B))
     C((C))
     D((D))
-    A --继承--> B
-    A --继承--> C
-    B --继承--> D
-    C --继承--> D
+    B --继承--> A
+    C --继承--> A
+    D --继承--> B
+    D --继承--> C
 ``` 
 - 方法：将`A`定义为`B`和`C`的虚基类
 ```cpp
