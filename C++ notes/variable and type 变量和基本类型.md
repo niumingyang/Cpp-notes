@@ -2,6 +2,14 @@
 
 [toc]
 
+## `string`与`char*`交互
+- `char*`可以初始化`string`或给`string`赋值
+- 可以通过`string`的成员函数`c_str()`获得`char*`类型的拷贝
+```cpp
+string s = "abcd";
+const char *str = s.c_str();
+```
+
 ## 引用和指针
 
 #### 引用
